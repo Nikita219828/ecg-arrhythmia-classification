@@ -17,17 +17,29 @@ A deep learning model for automated cardiac arrhythmia detection from ECG signal
 
 ## Architecture
 ECG Signal (187 samples)
+
 ↓
+
 CNN Block 1: Conv1D(1→32) + BN + ReLU + MaxPool
+
 ↓
+
 CNN Block 2: Conv1D(32→64) + BN + ReLU + MaxPool
+
 ↓
+
 CNN Block 3: Conv1D(64→128) + BN + ReLU + MaxPool
+
 ↓
+
 Bidirectional LSTM (128 hidden, 2 layers) + Attention
+
 ↓
+
 Classifier: Linear(256→128→5)
+
 ↓
+
 5-class Arrhythmia Prediction
 
 **Why CNN + LSTM:**
